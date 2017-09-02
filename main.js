@@ -58,13 +58,13 @@ charada_to_html = (charada) =>
     <body>
         <div>
             <h1>${charada.pergunta}</h1>
-            <input type="checkbox" name="resposta" id="resposta"></input>
+            <input type="checkbox" name="resposta" id="resposta"/>
             <label for="resposta">
-                <div>Resposta!</div>
+                <div>Mostrar resposta!</div>
                 <p>${charada.resposta}</p>
             </label>
             <div>
-                <a href=".">Nova Charada</a>
+                <a href="javascript:window.location.reload();">Nova Charada</a>
             </div>
         </div>
     </body>`;
