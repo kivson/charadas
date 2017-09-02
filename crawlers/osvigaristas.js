@@ -60,6 +60,7 @@ function crawl() {
         .tap(charadas => winston.info(`Foram encontradas ${charadas.length} Charadas`))
         .filter(x => x.score > MIN_SCORE)
         .filter(x => !x.pergunta.includes('mulher')) //Remove algumas charadas machistas
+        .filter(x => !x.pergunta.includes('loira')) //Remove algumas charadas machistas
         .tap(charadas => winston.info(`Depois de filtradas restaram ${charadas.length} Charadas`))
 
     charadas

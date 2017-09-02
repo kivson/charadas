@@ -1,6 +1,7 @@
 {
   "name": "charadas",
   "version": "0.0.1",
+  "main": "main.js",
   "dependencies": {
     "axios": "^0.16.2",
     "bluebird": "^3.5.0",
