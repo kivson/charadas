@@ -17,15 +17,57 @@ function get_charada_aleatoria() {
 }
 
 charada_to_html = (charada) =>
-    `<html>
-<body style="display: flex; justify-content: center; align-items: center;">
-<div style="text-align: center">
-<h1>${charada.pergunta}</h1>
-<p>${charada.resposta}</p>
-</div>
-</body>
-</html>
-`;
+    `<!DOCTYPE html>
+    <html lang="pt">
+    <head>
+        <title>Charadas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+    
+            body>div {
+                text-align: center
+            }
+    
+            body>div>div {
+                margin-top: 20px;
+            }
+    
+            input {
+                display: none;
+            }
+    
+            label p {
+                display: none;
+            }
+    
+            input[type=checkbox]:checked+label p {
+                display: block;
+            }
+    
+            input[type=checkbox]:checked+label div {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>${charada.pergunta}</h1>
+            <input type="checkbox" name="resposta" id="resposta"></input>
+            <label for="resposta">
+                <div>Resposta!</div>
+                <p>${charada.resposta}</p>
+            </label>
+            <div>
+                <a href=".">Nova Charada</a>
+            </div>
+        </div>
+    </body>`;
 
 
 function charadaAleatoria(req, res) {
