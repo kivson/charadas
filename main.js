@@ -18,9 +18,11 @@ function get_charada_aleatoria() {
 
 charada_to_html = (charada) =>
     `<html>
-<body>
+<body style="display: flex; justify-content: center; align-items: center;">
+<div style="text-align: center">
 <h1>${charada.pergunta}</h1>
-<h2>${charada.resposta}</h2>
+<p>${charada.resposta}</p>
+</div>
 </body>
 </html>
 `;
